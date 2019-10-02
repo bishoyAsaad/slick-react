@@ -1,0 +1,21 @@
+{
+  "name": "slick",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
+  },
+  "devDependencies": {
+    "@neutrinojs/react-components": "^8.3.0",
+    "neutrino": "^8.3.0"
+  },
+  "scripts": {
+    "start": "neutrino start --use @neutrinojs/react-components",
+    "build": "neutrino build --use @neutrinojs/react-components"
+  },
+  "author": "",
+  "license": "ISC"
+}
