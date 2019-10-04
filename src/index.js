@@ -69,7 +69,10 @@ const style = {
   },
   dotStyle : {
     backgroundColor: 'blue',
-    border: '0'
+    border: '0',
+    borderRadius: '100%',
+    fontSize: '0.5em',
+    width: '2.5em'
   }
 }
 function click(e) {

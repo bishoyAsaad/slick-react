@@ -31,6 +31,7 @@ class Slick extends Component {
                 if(settings.breakPoint>window.outerWidth)
                     this.setState({settings:settings.settings})
             }
+        this.refresh();
     }
     componentDidUpdate () {
         if(this.state.height!=this.rail.current.offsetHeight)
@@ -125,14 +126,22 @@ class Slick extends Component {
     dots () {
         let dots = [];
         let dotStyle;
+        try {
+            if(this.props.style.dotStyle.width) var sizeNum = this.props.style.dotStyle.width;
+            if(this.props.style.dotStyle.padding) var size = this.props.style.dotStyle.padding;
+        } catch (error) {
+            var sizeNum = '1.8em';
+            var size = '0.5em';
+        }
+        
         if(this.state.settings.dotsNumbered)
             dotStyle = {
-                width: '1.8em',
-                height: '1.8em'
+                width: sizeNum,
+                height: sizeNum
             }
         else 
             dotStyle = {
-                padding: '0.5em'
+                padding: size
             }
         let dotCustomStyle = Style.dotStyle;
         if(this.props.style!=null) dotCustomStyle = this.props.style.dotStyle;
@@ -217,7 +226,6 @@ class Slick extends Component {
         
     }
     render () {
-
         let rightButtonStyle = Style.buttonStyle;
         if(this.props.style!=null) rightButtonStyle = this.props.style.rightButtonStyle;
         let leftButtonStyle = Style.buttonStyle;
@@ -230,8 +238,6 @@ class Slick extends Component {
         if(!this.state.settings.dotsPosition) width = 100;
         let direction = ['column','row'];
         if(this.state.settings.dotsPosition) direction = ['row','column'];
-        if(this.state.width==0) this.refresh();
-
         return (
             <div ref = {this.container} style={{...Style.container,flexDirection:direction[0]}}>
                 <div style={{...Style.containerStyle,width:width+'%'}}>
