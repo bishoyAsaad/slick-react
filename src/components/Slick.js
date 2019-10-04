@@ -172,7 +172,6 @@ class Slick extends Component {
         element = ReactDom.findDOMNode(this).getElementsByClassName('dot')[Math.floor(this.state.slide / this.state.settings.rows)];
         if(this.state.slide == this.state.last)
         element = ReactDom.findDOMNode(this).getElementsByClassName('dot')[ReactDom.findDOMNode(this).getElementsByClassName('dot').length - 1];
-        console.log(Math.round(this.state.slide / this.state.settings.slides))
         if(element)
         element.classList.add('current');
     }
