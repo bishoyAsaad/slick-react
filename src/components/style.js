@@ -1,7 +1,7 @@
 export const container = {
     width: '100%',
     height: '100%',
-    display: 'flex'
+    display: 'flex',
 }
 export const containerStyle = {
     display:'flex',
@@ -12,7 +12,7 @@ export const dotsContainer = {
     display: 'inline-flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
-    margin: 'auto 0'
+    margin: 'auto 0',
 }
 export const dotContainer = {
     padding: '0.2em'
@@ -20,7 +20,7 @@ export const dotContainer = {
 export const dotStyle = {
     borderRadius: '100%',
     border: '0',
-    textAlign: 'center'
+    textAlign: 'center',
 }
 export const windowStyle = {
     display: 'inline-flex',
@@ -38,7 +38,8 @@ export const columnStyle = {
 export const slideStyle = {
     display: 'inline-flex',
     width: '100%',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    height: '100%',
 }
 export const buttonStyle = {
     backgroundColor: 'red',
@@ -51,9 +52,9 @@ export const buttonStyle = {
     textAlign: 'center',
     textDecoration: 'none',
     border: '0',
-    outline: '0'
+    outline: '0',
 }
 export const buttonContainer = {
     display: 'flex',
-    padding: '0 1%'
+    padding: '0 1%',
 }

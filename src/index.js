@@ -1,8 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Slick from './components/Slick';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './app.css';
 
 const root = document.getElementById('root');
 
@@ -15,7 +13,7 @@ const settings = {
   buttons: true,
   dotsPosition: 0,
   column: false,
-  rows: 1
+  rows: 2
 }
 const settings1 = {
   slides: 3,
@@ -70,8 +68,9 @@ const style = {
   dotStyle : {
     backgroundColor: 'blue',
     border: '0',
+    color: 'white',
     borderRadius: '100%',
-    fontSize: '0.5em',
+    fontSize: '0.8em',
     width: '2.5em'
   }
 }
@@ -98,13 +97,13 @@ class Main extends React.Component {
   render() {
     return(
     <div style={{display:'flex',flexWrap: 'wrap',alignItems:'start',height:'80%'}}>
-    <div style={{width:'40%',height:'40%',padding:'1%'}}>
+    <div style={{width:'40%',height:'30vh',padding:'1%'}}>
       <Slick settings={settings} style={style}>
           {[...Array(this.state.num).keys()].map((val)=>{
             return (<Card key={val}>{val+1}</Card>)
             })}
       </Slick>
-      </div><div style={{width:'40%',height:'100%'}}>
+      </div><div style={{width:'40%',height:'50vh',padding: '1%'}}>
       <Slick settings={settings1}>
         {[...Array(this.state.num).keys()].map((val)=>{
             return (<Card key={val}>{val+1}</Card>)

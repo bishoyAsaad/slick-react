@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 import * as Style from './style.js';
-class Slick extends Component {
+class Slick extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -72,7 +72,9 @@ class Slick extends Component {
             height: '100%',
             flex:'0 0 '+ this.state.width/this.state.settings.slides + 'px',
             width: this.state.width/this.state.settings.slides + 'px',
-            maxWidth: this.state.width/this.state.settings.slides + 'px'
+            maxWidth: this.state.width/this.state.settings.slides + 'px',
+            alignItems: 'center',
+            display: 'flex',
         }
         let rowChildStyle = {
             height: 100 / this.state.settings.rows + '%',
