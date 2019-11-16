@@ -2,11 +2,7 @@
 slick is a fully customizable slider for reactJs
 
 ## Demo
-just clone this repo and in console enter
-```
-npm run start
-```
-and this will open a working demo with variable number of components inside the slide
+### [React Slick slider Demo](https://bishogasaad.github.io/slick-react/)
 ## For production
 just use files in build
 ## API
